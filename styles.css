@@ -1,0 +1,259 @@
+/* Importando a fonte */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e9ecef;
+  background-image: url("https://www.transparenttextures.com/patterns/pw_sand.png");
+  color: #343a40;
+  text-align: center;
+  max-width: 100%;
+  min-height: 100vh; /* Garantindo altura mínima */
+  overflow-y: auto; /* Permite rolagem vertical */
+  transition: background-color 0.3s, color 0.3s; /* Transição para modo escuro */
+}
+
+header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 4px solid #0056b3;
+  margin-bottom: 20px; /* Espaço abaixo do header */
+}
+
+/* Estilo para a logo */
+.logo {
+  width: 300px; /* Ajuste o valor conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Faz com que a imagem não afete o layout */
+  margin: 0 auto; /* Centraliza a logo */
+}
+
+.input-group {
+  display: flex;
+  justify-content: center; /* Centraliza os elementos */
+  flex-direction: row; /* Alinha inputs e labels em linha */
+  align-items: center; /* Centraliza os elementos no eixo transversal */
+  padding: 0 10px;
+  margin: 20px 0; /* Espaçamento vertical */
+}
+
+.input-group label {
+  margin: 5px 10px; /* Ajuste do espaçamento entre labels e inputs */
+  text-align: center; /* Garante que o texto do label esteja centralizado */
+}
+
+.input-group input {
+  margin: 5px; /* Adiciona espaço entre os inputs e labels */
+  width: 90%; /* Aumenta a largura dos inputs em dispositivos móveis */
+  max-width: 250px; /* Limite máximo para inputs */
+  text-align: center; /* Centraliza o texto dentro do input */
+  padding: 10px; /* Adiciona padding aos inputs */
+  border: 2px solid #ced4da;
+  border-radius: 5px;
+  transition: border-color 0.3s; /* Transição suave para a borda */
+}
+
+.checkbox-group {
+  display: flex; /* Flexbox para dispor os checkboxes lado a lado */
+  justify-content: center; /* Centraliza os checkboxes */
+  margin: 10px 0; /* Espaço acima e abaixo */
+}
+
+.checkbox-group label {
+  margin: 0 15px; /* Adiciona espaçamento horizontal entre os checkboxes */
+}
+
+#number-display {
+  font-size: 4rem; /* Aumenta o tamanho do número na tela */
+  margin: 20px 0;
+  font-weight: bold;
+  border: 4px solid #007bff;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Animação do número */
+.animate {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1.2rem; /* Aumenta o tamanho do botão */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  margin: 10px; /* Margem entre os botões */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px); /* Eleva o botão ao passar o mouse */
+  background-color: #0056b3; /* Muda a cor ao passar o mouse */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Sombra maior no hover */
+}
+
+footer {
+  margin-top: 20px;
+  padding: 20px 0; /* Adiciona padding para dar mais espaço no footer */
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+footer a {
+  padding: 5px; /* Espaçamento entre os links */
+  transition: color 0.3s; /* Transição suave na cor */
+}
+
+footer a:hover {
+  color: #0056b3; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilo personalizado para a caixa de seleção */
+input[type="checkbox"] {
+  width: 20px; /* Ajusta a largura da caixa de seleção */
+  height: 20px; /* Ajusta a altura da caixa de seleção */
+  cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
+  accent-color: #007bff; /* Altera a cor da caixa de seleção (para navegadores que suportam) */
+  margin-right: 10px; /* Espaço à direita da caixa de seleção */
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column; /* Coloca os inputs em coluna em telas pequenas */
+    align-items: center; /* Centraliza os elementos no eixo transversal */
+  }
+
+  .input-group label {
+    margin: 5px 0; /* Alinha as labels acima dos inputs */
+  }
+
+  .input-group input {
+    width: 90%; /* Aumenta a largura dos inputs em dispositivos móveis */
+    max-width: none; /* Remove o limite máximo */
+    font-size: 1rem; /* Ajusta o tamanho da fonte para melhor leitura */
+  }
+
+  #number-display {
+    font-size: 2rem; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    padding: 10px; /* Ajusta o padding */
+  }
+
+  button {
+    font-size: 1rem; /* Ajusta o tamanho da fonte dos botões */
+    padding: 10px; /* Ajusta o padding */
+  }
+
+  footer {
+    font-size: 0.8rem; /* Ajusta o tamanho da fonte do footer */
+  }
+}
+
+/* Estilos específicos para telas de tablet (601px a 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .input-group {
+    justify-content: space-around; /* Espaça os inputs */
+  }
+}
+
+/* Estilos para telas maiores (desktop) */
+@media (min-width: 1025px) {
+  .input-group {
+    justify-content: center; /* Centraliza os inputs */
+  }
+
+  #number-display {
+    font-size: 5rem; /* Aumenta o tamanho do número para desktop */
+  }
+
+  button {
+    font-size: 1.2rem; /* Ajusta o tamanho do botão */
+  }
+}
+
+/* Estilos para o tema escuro */
+.dark-theme {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.dark-theme header {
+  background: linear-gradient(135deg, #0056b3, #004085);
+}
+
+.dark-theme #number-display {
+  border-color: #0056b3;
+  background-color: #495057;
+}
+
+.dark-theme input {
+  border-color: #6c757d;
+}
+
+.dark-theme button {
+  background: linear-gradient(135deg, #28a745, #218838);
+}
+
+.dark-theme footer a {
+  color: #ffd700;
+}
+
+.dark-theme footer a:hover {
+  color: #ffc107;
+}
+
+/* Estilo para a tela de contagem */
+#countdown-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+#countdown-container.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#countdown {
+  animation: pulse 1s infinite;
+  color: #ffcc00;
+  text-shadow: 0 
